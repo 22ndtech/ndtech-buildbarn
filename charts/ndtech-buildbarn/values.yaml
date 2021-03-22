@@ -1,0 +1,15 @@
+# environment defaults internally to development
+# however, consumers can override it using a custom values file.
+environment: development
+serviceAccount:
+  name: buildbarn
+deployment:
+  namespace: buildbarn
+  browserReplicaCount: 1
+  browserImage: buildbarn/bb-browser:20210320T164002Z-f32af0b
+  browserHostName: ndtech-staging.bb-browser.22ndtech.com
+  frontendReplicaCount: 1
+  frontendImage: buildbarn/bb-storage:20210226T075542Z-a042798
+  schedulerImage: buildbarn/bb-scheduler:20210316T054813Z-6d277d6
+  workerUbuntu1604ReplicaCount: 1
+  workerUbuntu1604Image: buildbarn/bb-worker:20210316T054813Z-6d277d6

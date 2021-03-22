@@ -1,0 +1,42 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  namespace: {{ .Values.deployment.namespace }}
+spec:
+  replicas: {{ .Values.deployment.frontendReplicaCount }}
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+      - args:
+        - /config/frontend.jsonnet
+        image: {{ .Values.deployment.frontendImage }}
+        name: storage
+        ports:
+        - containerPort: 8980
+          protocol: TCP
+        volumeMounts:
+        - mountPath: /config/
+          name: configs
+          readOnly: true
+      volumes:
+      - name: configs
+        projected:
+          sources:
+          - configMap:
+              name: frontend
+              items:
+              - key: frontend.jsonnet
+                path: frontend.jsonnet
+          - configMap:
+              name: common
+              items:
+              - key: common.libsonnet
+                path: common.libsonnet
