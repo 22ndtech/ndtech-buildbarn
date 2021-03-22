@@ -4,6 +4,7 @@ environment: development
 serviceAccount:
   name: ndtech-buildbarn
 deployment:
+  namespace: ndtech-staging
   replicas: 1
   minReadySeconds: 3
   namespace: ndtech-staging
