@@ -11,5 +11,3 @@ data:
   frontendReplicaCount: {{ .Values.deployment.frontendReplicaCount }}
   frontendImage: {{ .Values.deployment.frontendImage }}
   schedulerImage: {{ .Values.deployment.schedulerImage }}
-  workerUbuntu1604ReplicaCount: {{ .Values.deployment.workerUbuntu1604ReplicaCount }}
-  workerUbuntu1604Image: {{ .Values.deployment.workerUbuntu1604Image }}
