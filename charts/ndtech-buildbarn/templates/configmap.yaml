@@ -4,10 +4,4 @@ metadata:
   name: ndtech-buildbarn
   namespace: {{ .Values.deployment.namespace }}
 data:
-  namespace: {{ .Values.deployment.namespace }}
-  browserReplicaCount: {{ .Values.deployment.browserReplicaCount }}
-  browserImage: {{ .Values.deployment.browserImage }}
-  browserHostName: {{ .Values.deployment.browserHostName }}
-  frontendReplicaCount: {{ .Values.deployment.frontendReplicaCount }}
-  frontendImage: {{ .Values.deployment.frontendImage }}
-  schedulerImage: {{ .Values.deployment.schedulerImage }}
+  name: "ndtech-buildbarn"
