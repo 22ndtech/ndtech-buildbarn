@@ -11,5 +11,3 @@ deployment:
   frontendReplicaCount: 1
   frontendImage: buildbarn/bb-storage:20210226T075542Z-a042798
   schedulerImage: buildbarn/bb-scheduler:20210316T054813Z-6d277d6
-  workerUbuntu1604ReplicaCount: 1
-  workerUbuntu1604Image: buildbarn/bb-worker:20210316T054813Z-6d277d6
