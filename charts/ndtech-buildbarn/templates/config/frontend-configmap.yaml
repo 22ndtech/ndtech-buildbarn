@@ -5,7 +5,6 @@ data:
 
     {
       blobstore: common.blobstore,
-      httpListenAddress: common.httpListenAddress,
       grpcServers: [{
         listenAddresses: [':8980'],
         authenticationPolicy: { allow: {} },
