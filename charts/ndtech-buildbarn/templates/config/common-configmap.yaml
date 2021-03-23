@@ -37,7 +37,7 @@ data:
         },
       },
       # Remember to set your browserUrl to the ingress of the browser deployment
-      # browserUrl: 'http://address-of-bb-browser-ingress:80',
+      browserUrl: 'https://ndtech-staging.buildbarn.22ndtech.com:80',
       maximumMessageSizeBytes: 16 * 1024 * 1024,
       httpListenAddress: ':80'
     }
