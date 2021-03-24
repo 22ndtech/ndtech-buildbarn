@@ -9,7 +9,7 @@ data:
           'local': {
             keyLocationMapOnBlockDevice: {
               file: {
-                path: '/storage-cas/key_location_map',
+                path: '/cas/key_location_map',
                 sizeBytes: 16 * 1024 * 1024,
               },
             },
@@ -21,7 +21,7 @@ data:
             blocksOnBlockDevice: {
               source: {
                 file: {
-                  path: '/storage-cas/blocks',
+                  path: '/cas/blocks',
                   sizeBytes: 10 * 1024 * 1024 * 1024,
                 },
               },
@@ -38,7 +38,7 @@ data:
             'local': {
               keyLocationMapOnBlockDevice: {
                 file: {
-                  path: '/storage-ac/key_location_map',
+                  path: '/ac/key_location_map',
                   sizeBytes: 1024 * 1024,
                 },
               },
@@ -50,14 +50,14 @@ data:
               blocksOnBlockDevice: {
                 source: {
                   file: {
-                    path: '/storage-ac/blocks',
+                    path: '/ac/blocks',
                     sizeBytes: 100 * 1024 * 1024,
                   },
                 },
                 spareBlocks: 3,
               },
               persistent: {
-                stateDirectoryPath: '/storage-ac/persistent_state',
+                stateDirectoryPath: '/ac/persistent_state',
                 minimumEpochInterval: '300s',
               },
             },
