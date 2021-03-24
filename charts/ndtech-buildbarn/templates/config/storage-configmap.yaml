@@ -28,7 +28,7 @@ data:
               spareBlocks: 3,
             },
             persistent: {
-              stateDirectoryPath: '/storage-cas/persistent_state',
+              stateDirectoryPath: '/cas/persistent_state',
               minimumEpochInterval: '300s',
             },
           },
