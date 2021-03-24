@@ -6,7 +6,7 @@ data:
     {
       blobstore: {
         contentAddressableStorage: {
-          circular: {
+          local: {
             directory: '/cas',
             offsetFileSizeBytes: 16 * 1024 * 1024,
             offsetCacheSize: 10000,
@@ -15,7 +15,7 @@ data:
           },
         },
         actionCache: {
-          circular: {
+          local: {
             directory: '/ac',
             offsetFileSizeBytes: 1024 * 1024,
             offsetCacheSize: 1000,
@@ -25,7 +25,6 @@ data:
           },
         },
       },
-      httpListenAddress: common.httpListenAddress,
       grpcServers: [{
         listenAddresses: [':8981'],
         authenticationPolicy: { allow: {} },
