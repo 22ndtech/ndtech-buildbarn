@@ -18,6 +18,10 @@ spec:
         app: worker
         instance: ubuntu16-04
     spec:
+      securityContext:
+        runAsUser: 1000
+        runAsGroup: 3000
+        fsGroup: 2000
       containers:
       - args:
         - /config/worker-ubuntu16-04.jsonnet
